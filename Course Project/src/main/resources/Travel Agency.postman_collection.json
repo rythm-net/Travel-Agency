@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "e7dc8c58-466c-4bd6-95dc-343dda41b6c7",
+		"name": "Travel Agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26980369"
+	},
+	"item": [
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Create location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": 1,\r\n    \"country\": \"Bulgaria\",\r\n    \"city\":\"Plovdiv\",\r\n    \"street\":\"Street\",\r\n    \"imageUrl\":\"imageUrl\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/locations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/locations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/locations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"locations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update location",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": 1,\r\n    \"country\": \"Bulgaria\",\r\n    \"city\":\"Plovdiv\",\r\n    \"street\":\"Street\",\r\n    \"imageUrl\":\"imageUrl\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/locations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"locations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/locations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"locations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Holidays",
+			"item": [
+				{
+					"name": "Create holidays",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration\": 1,\r\n    \"freeSlots\":1,\r\n    \"price\": 1.0,\r\n    \"locationId\":1,\r\n    \"title\": \"title\",\r\n    \"startDate\":\"2024-01-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/holidays",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"holidays"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all holidays",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/holidays",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"holidays"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get holiday by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/holidays/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"holidays",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update holiday",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration\": 1,\r\n    \"freeSlots\":1,\r\n    \"price\": 1.0,\r\n    \"locationId\":1,\r\n    \"title\": \"title\",\r\n    \"startDate\":\"2024-01-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/holidays/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"holidays",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update holiday Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/holidays/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"holidays",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "Create Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\": \"phoneNumber\",\r\n    \"contactName\":\"contactName\",\r\n    \"holidayId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/reservations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/reservations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reservation by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/reservations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\": \"phoneNumber\",\r\n    \"contactName\":\"contactName\",\r\n    \"holidayId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/reservations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/reservations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

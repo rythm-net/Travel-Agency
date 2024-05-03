@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active:
+      postgre
+  jpa:
+    properties:
+      hibernate:
+        default_schema: travel_agency
+    hibernate:
+      ddl-auto: none
